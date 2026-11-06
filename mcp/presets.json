@@ -1,0 +1,146 @@
+{
+ "schema": 1,
+ "presets": [
+  {
+   "id": "github",
+   "name": "GitHub",
+   "category": "Código e deploy",
+   "description": "Ler e criar repositórios, issues e pull requests.",
+   "url": "https://api.githubcopilot.com/mcp/",
+   "auth": "token",
+   "token": {
+    "label": "Token de acesso do GitHub",
+    "helpUrl": "https://github.com/settings/personal-access-tokens/new",
+    "help": "Crie um token e cole aqui. Dê só as permissões que quer liberar.",
+    "header": "Authorization",
+    "prefix": "Bearer "
+   }
+  },
+  {
+   "id": "vercel",
+   "name": "Vercel",
+   "category": "Código e deploy",
+   "description": "Ver projetos, deploys e logs do seu site na Vercel.",
+   "url": "https://mcp.vercel.com",
+   "auth": "oauth"
+  },
+  {
+   "id": "cloudflare",
+   "name": "Cloudflare",
+   "category": "Código e deploy",
+   "description": "Gerenciar Workers, bancos e armazenamento na Cloudflare.",
+   "url": "https://bindings.mcp.cloudflare.com/mcp",
+   "auth": "oauth"
+  },
+  {
+   "id": "sentry",
+   "name": "Sentry",
+   "category": "Código e deploy",
+   "description": "Consultar erros do seu app para corrigir mais rápido.",
+   "url": "https://mcp.sentry.dev/mcp",
+   "auth": "oauth"
+  },
+  {
+   "id": "supabase",
+   "name": "Supabase",
+   "category": "Dados e pagamentos",
+   "description": "Criar tabelas, consultar dados e gerenciar seu banco.",
+   "url": "https://mcp.supabase.com/mcp",
+   "auth": "oauth"
+  },
+  {
+   "id": "stripe",
+   "name": "Stripe",
+   "category": "Dados e pagamentos",
+   "description": "Consultar clientes, cobranças e produtos do Stripe.",
+   "url": "https://mcp.stripe.com",
+   "auth": "token",
+   "token": {
+    "label": "Chave restrita do Stripe",
+    "helpUrl": "https://dashboard.stripe.com/apikeys",
+    "help": "Crie uma chave restrita (rk_…) só com leitura. Evite a chave secreta completa.",
+    "header": "Authorization",
+    "prefix": "Bearer "
+   }
+  },
+  {
+   "id": "paypal",
+   "name": "PayPal",
+   "category": "Dados e pagamentos",
+   "description": "Pedidos, faturas e pagamentos do PayPal.",
+   "url": "https://mcp.paypal.com/mcp",
+   "auth": "oauth"
+  },
+  {
+   "id": "figma",
+   "name": "Figma",
+   "category": "Trabalho e design",
+   "description": "Transformar seus designs do Figma em código.",
+   "url": "https://mcp.figma.com/mcp",
+   "auth": "oauth"
+  },
+  {
+   "id": "notion",
+   "name": "Notion",
+   "category": "Trabalho e design",
+   "description": "Ler e escrever nas suas páginas do Notion.",
+   "url": "https://mcp.notion.com/mcp",
+   "auth": "oauth"
+  },
+  {
+   "id": "linear",
+   "name": "Linear",
+   "category": "Trabalho e design",
+   "description": "Ver e criar tarefas e projetos no Linear.",
+   "url": "https://mcp.linear.app/mcp",
+   "auth": "oauth"
+  },
+  {
+   "id": "asana",
+   "name": "Asana",
+   "category": "Trabalho e design",
+   "description": "Acompanhar tarefas e projetos no Asana.",
+   "url": "https://mcp.asana.com/sse",
+   "auth": "oauth"
+  },
+  {
+   "id": "atlassian",
+   "name": "Jira e Confluence",
+   "category": "Trabalho e design",
+   "description": "Tarefas do Jira e páginas do Confluence.",
+   "url": "https://mcp.atlassian.com/v1/sse",
+   "auth": "oauth"
+  },
+  {
+   "id": "context7",
+   "name": "Context7",
+   "category": "Documentação",
+   "description": "Documentação atualizada de bibliotecas, para a IA não inventar código.",
+   "url": "https://mcp.context7.com/mcp",
+   "auth": "none"
+  },
+  {
+   "id": "cloudflare-docs",
+   "name": "Documentação da Cloudflare",
+   "category": "Documentação",
+   "description": "Busca na documentação oficial da Cloudflare.",
+   "url": "https://docs.mcp.cloudflare.com/mcp",
+   "auth": "none"
+  },
+  {
+   "id": "posthog",
+   "name": "PostHog",
+   "category": "Dados e pagamentos",
+   "description": "Consultar eventos, funis e flags do seu produto no PostHog.",
+   "url": "https://mcp.posthog.com/mcp",
+   "auth": "token",
+   "token": {
+    "label": "Chave pessoal do PostHog",
+    "helpUrl": "https://app.posthog.com/settings/user-api-keys",
+    "help": "Crie uma chave pessoal com o escopo MCP Server e cole aqui.",
+    "header": "Authorization",
+    "prefix": "Bearer "
+   }
+  }
+ ]
+}

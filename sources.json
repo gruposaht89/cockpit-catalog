@@ -1,0 +1,657 @@
+{
+  "sources": [
+    {
+      "repo": "mattpocock/skills",
+      "sha": "6fd947921b935b7e1e69293a200400f0fdd5c15f",
+      "paths": [
+        "skills/productivity/grill-me",
+        "skills/engineering/code-review",
+        "skills/engineering/to-spec",
+        "skills/engineering/to-tickets"
+      ],
+      "categories": [
+        "planning"
+      ],
+      "requirements": [],
+      "skillCategories": {
+        "code-review": [
+          "engineering"
+        ]
+      },
+      "skillRequirements": {
+        "code-review": [
+          "Configuração do rastreador em docs/agents/issue-tracker.md"
+        ],
+        "to-spec": [
+          "Configuração do rastreador em docs/agents/issue-tracker.md"
+        ],
+        "to-tickets": [
+          "Configuração do rastreador e das etiquetas de triagem do projeto"
+        ]
+      },
+      "skillSetup": {
+        "code-review": {
+          "title": "Rastreador do projeto",
+          "steps": [
+            "Configure docs/agents/issue-tracker.md com o rastreador do projeto e seu fluxo de publicação. O guia oficial usa setup-matt-pocock-skills.",
+            "Para to-tickets, configure também as etiquetas de triagem. Se usar um serviço externo, autentique a ferramenta desse rastreador.",
+            "Verifique que o agente consegue consultar o rastreador. A publicação segue as aprovações e permissões da tarefa."
+          ],
+          "links": [
+            {
+              "label": "Guia oficial",
+              "url": "https://github.com/mattpocock/skills"
+            }
+          ]
+        },
+        "to-spec": {
+          "title": "Rastreador do projeto",
+          "steps": [
+            "Configure docs/agents/issue-tracker.md com o rastreador do projeto e seu fluxo de publicação. O guia oficial usa setup-matt-pocock-skills.",
+            "Para to-tickets, configure também as etiquetas de triagem. Se usar um serviço externo, autentique a ferramenta desse rastreador.",
+            "Verifique que o agente consegue consultar o rastreador. A publicação segue as aprovações e permissões da tarefa."
+          ],
+          "links": [
+            {
+              "label": "Guia oficial",
+              "url": "https://github.com/mattpocock/skills"
+            }
+          ]
+        },
+        "to-tickets": {
+          "title": "Rastreador do projeto",
+          "steps": [
+            "Configure docs/agents/issue-tracker.md com o rastreador do projeto e seu fluxo de publicação. O guia oficial usa setup-matt-pocock-skills.",
+            "Para to-tickets, configure também as etiquetas de triagem. Se usar um serviço externo, autentique a ferramenta desse rastreador.",
+            "Verifique que o agente consegue consultar o rastreador. A publicação segue as aprovações e permissões da tarefa."
+          ],
+          "links": [
+            {
+              "label": "Guia oficial",
+              "url": "https://github.com/mattpocock/skills"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "repo": "akitaonrails/ai-memory",
+      "sha": "89bd8ded3c1ab8b769cf99417d038ed0364403c8",
+      "paths": [
+        "crates/ai-memory-core/src/routing_skills"
+      ],
+      "categories": [
+        "knowledge",
+        "engineering"
+      ],
+      "requirements": [
+        "Servidor ai-memory em execução e MCP ai-memory conectado ao agente"
+      ],
+      "extra": {
+        "README.md": "UPSTREAM-README.md",
+        "docs/install.md": "UPSTREAM-INSTALL.md",
+        "docs/mcp-install.md": "UPSTREAM-MCP-INSTALL.md"
+      },
+      "setup": {
+        "title": "AI Memory",
+        "steps": [
+          "Instale o executável ai-memory no servidor do Cockpit, seguindo o guia oficial para seu sistema.",
+          "Configure e inicie o servidor de memória. Conecte o MCP ai-memory ao harness do agente usando o guia de instalação MCP.",
+          "Confirme que as ferramentas memory_* aparecem no agente e que o projeto correto está selecionado antes de consultar ou gravar memória."
+        ],
+        "links": [
+          {
+            "label": "Guia oficial",
+            "url": "https://github.com/akitaonrails/ai-memory"
+          },
+          {
+            "label": "Conectar o MCP ai-memory",
+            "url": "https://github.com/akitaonrails/ai-memory/blob/89bd8ded3c1ab8b769cf99417d038ed0364403c8/docs/mcp-install.md"
+          }
+        ]
+      }
+    },
+    {
+      "repo": "upstash/context7",
+      "sha": "47ef702bf5919ad983ea2d3e2d1cde833d77e646",
+      "paths": [
+        "skills/find-docs",
+        "skills/context7-cli"
+      ],
+      "categories": [
+        "engineering",
+        "research"
+      ],
+      "requirements": [
+        "Node.js 18+ e internet para executar a CLI Context7; login ou API key opcionais para limites maiores"
+      ],
+      "setup": {
+        "title": "Context7",
+        "integration": "context7",
+        "steps": [
+          "Use o Context7 para consultar documentação atualizada de bibliotecas. As skills incluídas usam a CLI, sem exigir MCP.",
+          "Para limites maiores, entre em context7.com/dashboard e crie uma API key. Você também pode autenticar a CLI com npx ctx7@latest login no servidor do Cockpit.",
+          "Salve a API key em Configurações → Skills. O Cockpit a aplica como CONTEXT7_API_KEY aos novos agentes; reinicie agentes já abertos.",
+          "No primeiro uso, npx ctx7@latest baixa a CLI. Você pode verificar a consulta com npx ctx7@latest library React \"documentação de hooks\". Sem login, aplicam-se os limites anônimos."
+        ],
+        "links": [
+          {
+            "label": "Entrar e criar API key",
+            "url": "https://context7.com/dashboard"
+          },
+          {
+            "label": "Guia oficial do Context7",
+            "url": "https://github.com/upstash/context7#installation"
+          }
+        ]
+      }
+    },
+    {
+      "repo": "anthropics/skills",
+      "sha": "683bc88e56f3e09ba94f7055977f3d3aa499f202",
+      "paths": [
+        "skills/frontend-design"
+      ],
+      "categories": [
+        "design"
+      ],
+      "requirements": []
+    },
+    {
+      "repo": "Panniantong/Agent-Reach",
+      "sha": "a19a171fa980a0785849596492e0af4db800c82f",
+      "paths": [
+        "agent_reach/skill"
+      ],
+      "categories": [
+        "research"
+      ],
+      "requirements": [
+        "agent-reach CLI; canais autenticados precisam de credenciais"
+      ],
+      "setup": {
+        "title": "Agent Reach",
+        "steps": [
+          "Instale a CLI agent-reach no servidor conforme o guia oficial.",
+          "Execute agent-reach doctor --json para conferir quais canais estão disponíveis.",
+          "Configure credenciais apenas para os canais que for usar, conforme o guia de cada plataforma. Faça login na sua própria conta quando necessário."
+        ],
+        "links": [
+          {
+            "label": "Guia oficial",
+            "url": "https://github.com/Panniantong/Agent-Reach"
+          }
+        ]
+      }
+    },
+    {
+      "repo": "vercel-labs/agent-skills",
+      "sha": "063bee94c3f4df8453406c830b0a7df0f2860278",
+      "paths": [
+        "skills/web-design-guidelines"
+      ],
+      "categories": [
+        "design"
+      ],
+      "requirements": []
+    },
+    {
+      "repo": "leonxlnx/taste-skill",
+      "sha": "e3c92037548e3e49bea8e6b906c99a8549654e71",
+      "paths": [
+        "skills/taste-skill",
+        "skills/soft-skill",
+        "skills/redesign-skill",
+        "skills/minimalist-skill"
+      ],
+      "categories": [
+        "design"
+      ],
+      "requirements": []
+    },
+    {
+      "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "sha": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+      "paths": [
+        ".claude/skills/ui-ux-pro-max"
+      ],
+      "categories": [
+        "design"
+      ],
+      "requirements": [
+        "Python 3 para a busca local"
+      ],
+      "setup": {
+        "title": "UI/UX Pro Max",
+        "steps": [
+          "Instale Python 3 no servidor do Cockpit.",
+          "As tabelas e scripts de busca já acompanham a skill. Confira o comando de busca em suas instruções e execute-o com Python 3."
+        ],
+        "links": [
+          {
+            "label": "Guia oficial",
+            "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill"
+          }
+        ]
+      }
+    },
+    {
+      "repo": "emilkowalski/skills",
+      "sha": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+      "paths": [
+        "skills"
+      ],
+      "categories": [
+        "design",
+        "animation"
+      ],
+      "requirements": []
+    },
+    {
+      "repo": "pbakaus/impeccable",
+      "sha": "5351582ac41fc26010afa76b80ab1d669c4e68ba",
+      "paths": [
+        ".agents/skills/impeccable"
+      ],
+      "categories": [
+        "design"
+      ],
+      "requirements": [
+        "Executável Impeccable; o primeiro uso pode baixar o binário"
+      ],
+      "setup": {
+        "title": "Impeccable",
+        "steps": [
+          "As instruções e o launcher já acompanham o Cockpit.",
+          "O primeiro uso pode baixar o executável oficial; confira acesso à internet e os requisitos do launcher nas instruções da skill."
+        ],
+        "links": [
+          {
+            "label": "Guia oficial",
+            "url": "https://github.com/pbakaus/impeccable"
+          }
+        ]
+      }
+    },
+    {
+      "repo": "coreyhaines31/marketingskills",
+      "sha": "5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80",
+      "paths": [
+        "skills"
+      ],
+      "categories": [
+        "marketing"
+      ],
+      "requirements": [
+        "Integrações externas podem exigir ferramentas e credenciais"
+      ],
+      "setup": {
+        "title": "Integrações de marketing",
+        "steps": [
+          "Leia as instruções da skill e identifique se a tarefa usa uma integração externa. Muitas tarefas funcionam somente com as instruções locais.",
+          "Quando usar uma integração, siga o guia da ferramenta correspondente para instalar sua CLI ou conectar a conta e API key.",
+          "Valide o acesso no agente antes de consultar dados ou publicar alterações."
+        ],
+        "links": [
+          {
+            "label": "Guia oficial",
+            "url": "https://github.com/coreyhaines31/marketingskills"
+          }
+        ]
+      }
+    },
+    {
+      "repo": "shadcn-ui/ui",
+      "sha": "e8c3143b1cd191280befcd6c9538284bb43399a8",
+      "paths": [
+        "skills"
+      ],
+      "categories": [
+        "design",
+        "frontend"
+      ],
+      "requirements": [
+        "CLI shadcn conforme o projeto"
+      ],
+      "setup": {
+        "title": "shadcn/ui",
+        "steps": [
+          "Verifique a compatibilidade do framework e do gerenciador de pacotes do projeto.",
+          "Siga o guia oficial para inicializar shadcn/ui no projeto quando necessário. Não basta ativar a skill para instalar os componentes."
+        ],
+        "links": [
+          {
+            "label": "Guia oficial",
+            "url": "https://github.com/shadcn-ui/ui"
+          }
+        ]
+      }
+    },
+    {
+      "repo": "greensock/gsap-skills",
+      "sha": "aed9cfd3277740755f6bfc1155c7aa645403b760",
+      "paths": [
+        "skills"
+      ],
+      "categories": [
+        "animation",
+        "frontend"
+      ],
+      "requirements": [
+        "GSAP no projeto quando usado"
+      ],
+      "setup": {
+        "title": "GSAP",
+        "steps": [
+          "Confira o gerenciador de pacotes e o framework do projeto.",
+          "Instale GSAP no projeto quando a implementação precisar da biblioteca, seguindo a skill e a documentação oficial."
+        ],
+        "links": [
+          {
+            "label": "Guia oficial",
+            "url": "https://github.com/greensock/gsap-skills"
+          }
+        ]
+      }
+    },
+    {
+      "repo": "cloudflare/security-audit-skill",
+      "sha": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8",
+      "paths": [
+        "skills"
+      ],
+      "categories": [
+        "security"
+      ],
+      "requirements": [
+        "Ferramentas de auditoria indicadas na skill"
+      ],
+      "setup": {
+        "title": "Auditoria de segurança",
+        "steps": [
+          "Leia a skill para identificar as ferramentas de auditoria necessárias à tarefa.",
+          "Instale as ferramentas no servidor ou projeto conforme o guia oficial e verifique seu funcionamento antes da auditoria."
+        ],
+        "links": [
+          {
+            "label": "Guia oficial",
+            "url": "https://github.com/cloudflare/security-audit-skill"
+          }
+        ]
+      }
+    },
+    {
+      "repo": "usestrix/strix",
+      "sha": "f1386cad37964197a483ff43c25161f9d933f050",
+      "paths": [
+        "skills"
+      ],
+      "categories": [
+        "security"
+      ],
+      "requirements": [
+        "Strix CLI e credenciais para executar testes externos"
+      ],
+      "setup": {
+        "title": "Strix",
+        "steps": [
+          "Instale Strix e suas dependências no servidor conforme o guia oficial.",
+          "Configure as credenciais exigidas pelo provedor que será usado.",
+          "Valide a CLI e execute testes somente nos alvos autorizados pela tarefa."
+        ],
+        "links": [
+          {
+            "label": "Guia oficial",
+            "url": "https://github.com/usestrix/strix"
+          }
+        ]
+      }
+    },
+    {
+      "repo": "mvanhorn/last30days-skill",
+      "sha": "7f582ad8c2e140eca08098b245f9e31b68e28b60",
+      "paths": [
+        "skills/last30days"
+      ],
+      "categories": [
+        "research"
+      ],
+      "requirements": [
+        "Python 3; algumas fontes exigem API keys"
+      ],
+      "setup": {
+        "title": "Last 30 Days",
+        "steps": [
+          "Instale Python 3 no servidor. Os scripts acompanham a skill.",
+          "Consulte as instruções para escolher as fontes e configurar somente as API keys exigidas por elas.",
+          "Execute o diagnóstico ou uma busca de teste indicado na documentação para conferir o acesso às fontes."
+        ],
+        "links": [
+          {
+            "label": "Guia oficial",
+            "url": "https://github.com/mvanhorn/last30days-skill"
+          }
+        ]
+      }
+    },
+    {
+      "repo": "bradautomates/claude-video",
+      "sha": "03ceb42f7fa2c4439aca01752118044baabffb8f",
+      "paths": [
+        "skills/watch"
+      ],
+      "categories": [
+        "video",
+        "research"
+      ],
+      "requirements": [
+        "Python 3; ffmpeg/yt-dlp no modo local ou GEMINI_API_KEY"
+      ],
+      "setup": {
+        "title": "Vídeo",
+        "steps": [
+          "Escolha o modo local ou o modo Gemini nas instruções da skill.",
+          "No modo local, instale Python 3, ffmpeg e yt-dlp no servidor. No modo Gemini, configure GEMINI_API_KEY na ferramenta que executará o comando."
+        ],
+        "links": [
+          {
+            "label": "Guia oficial",
+            "url": "https://github.com/bradautomates/claude-video"
+          }
+        ]
+      }
+    },
+    {
+      "repo": "teng-lin/notebooklm-py",
+      "sha": "1d8920fddb49aa6ad4b0ad4548c3047a4d0e22ce",
+      "paths": [
+        "SKILL.md"
+      ],
+      "categories": [
+        "research",
+        "knowledge"
+      ],
+      "requirements": [
+        "notebooklm-py e login Google"
+      ],
+      "setup": {
+        "title": "NotebookLM",
+        "steps": [
+          "Instale notebooklm-py no servidor conforme o guia oficial.",
+          "Faça o login Google com o fluxo da CLI. A autenticação é da sua própria conta e fica sob controle do NotebookLM.",
+          "Confirme na CLI que o agente consegue acessar seus notebooks antes de usar a skill."
+        ],
+        "links": [
+          {
+            "label": "Guia oficial",
+            "url": "https://github.com/teng-lin/notebooklm-py"
+          }
+        ]
+      }
+    },
+    {
+      "repo": "Graphify-Labs/graphify",
+      "sha": "f765dcb3415d60fcfce390868da49e77894f2dc2",
+      "paths": [
+        "graphify/skill-agents.md"
+      ],
+      "categories": [
+        "architecture",
+        "knowledge"
+      ],
+      "requirements": [
+        "graphifyy CLI; Python 3.12+"
+      ],
+      "extra": {
+        "graphify/skills/agents/references": "references"
+      },
+      "setup": {
+        "title": "Graphify",
+        "steps": [
+          "Instale Python 3.12+ e a CLI graphifyy no servidor conforme o guia oficial.",
+          "Verifique as dependências necessárias ao tipo de projeto que será analisado e execute o diagnóstico indicado no guia."
+        ],
+        "links": [
+          {
+            "label": "Guia oficial",
+            "url": "https://github.com/Graphify-Labs/graphify"
+          }
+        ]
+      }
+    },
+    {
+      "repo": "DietrichGebert/ponytail",
+      "sha": "552acd5efd0aeae2583a12efe39373d2f076f25e",
+      "paths": [
+        "skills"
+      ],
+      "categories": [
+        "engineering"
+      ],
+      "requirements": []
+    },
+    {
+      "repo": "juliusbrussee/caveman",
+      "sha": "99aafe151a1be72be783e662858e8a0955add59f",
+      "paths": [
+        "skills"
+      ],
+      "categories": [
+        "efficiency"
+      ],
+      "requirements": [
+        "Algumas skills dependem de CLIs/hooks externos"
+      ],
+      "setup": {
+        "title": "Caveman",
+        "steps": [
+          "Confira as instruções da skill escolhida. As orientações de escrita podem funcionar sem ferramentas externas.",
+          "Para funcionalidades que usam CLIs ou hooks, configure somente os requisitos indicados para o seu harness."
+        ],
+        "links": [
+          {
+            "label": "Guia oficial",
+            "url": "https://github.com/juliusbrussee/caveman"
+          }
+        ]
+      }
+    },
+    {
+      "repo": "rtk-ai/rtk",
+      "sha": "e0b2e85a0a7114b56a2d9f51c501ccc00c7e48f7",
+      "paths": [],
+      "categories": [
+        "efficiency"
+      ],
+      "requirements": [
+        "RTK CLI"
+      ],
+      "adapter": "rtk",
+      "extra": {
+        "README.md": "references/README.md",
+        "INSTALL.md": "references/INSTALL.md"
+      },
+      "setup": {
+        "title": "RTK",
+        "steps": [
+          "Instale a CLI RTK no servidor conforme o guia oficial.",
+          "Consulte references/INSTALL.md, incluído na skill, para configurar o harness e os hooks quando necessários.",
+          "Valide a execução da CLI antes de usar a skill."
+        ],
+        "links": [
+          {
+            "label": "Guia oficial",
+            "url": "https://github.com/rtk-ai/rtk"
+          }
+        ]
+      }
+    },
+    {
+      "repo": "kepano/obsidian-skills",
+      "sha": "3ccff5338ea700537839b21900aa5358a0402c98",
+      "paths": [
+        "skills"
+      ],
+      "categories": [
+        "knowledge"
+      ],
+      "requirements": [
+        "Obsidian/CLIs conforme a skill"
+      ],
+      "setup": {
+        "title": "Obsidian",
+        "steps": [
+          "Confira se a skill escolhida exige Obsidian em execução ou uma CLI.",
+          "Configure o aplicativo, a CLI e o acesso ao vault conforme as instruções oficiais; skills de formato Markdown podem funcionar somente com os arquivos."
+        ],
+        "links": [
+          {
+            "label": "Guia oficial",
+            "url": "https://github.com/kepano/obsidian-skills"
+          }
+        ]
+      }
+    },
+    {
+      "repo": "obra/superpowers",
+      "sha": "8ca22dba9a94f28898bbce59f2537ff4d87c747d",
+      "paths": [
+        "skills"
+      ],
+      "categories": [
+        "engineering",
+        "planning"
+      ],
+      "requirements": []
+    },
+    {
+      "repo": "uizze.com",
+      "kind": "archive",
+      "url": "https://uizze.com/.well-known/agent-skills/anti-ui-slop/ebc5743a68edd2f76ae5171090b8408c2bdb63ec87074eebaa1207b4cf095697/anti-ui-slop.zip",
+      "sha": "ebc5743a68edd2f76ae5171090b8408c2bdb63ec87074eebaa1207b4cf095697",
+      "paths": [
+        "."
+      ],
+      "categories": [
+        "design"
+      ],
+      "requirements": [
+        "Referências UIZZE via MCP exigem conta e token; orientações locais funcionam sem MCP"
+      ],
+      "setup": {
+        "title": "UIZZE",
+        "steps": [
+          "As orientações locais anti-ui-slop já estão disponíveis sem MCP.",
+          "Para consultar referências UIZZE pelo MCP, crie sua conta e token no site oficial e configure a conexão no harness do agente."
+        ],
+        "links": [
+          {
+            "label": "Guia oficial",
+            "url": "https://uizze.com"
+          }
+        ]
+      }
+    }
+  ],
+  "unavailable": []
+}
